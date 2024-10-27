@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.skeleton-loader, .deadline-timer {
+  margin-top: 32px;
+}
+
+.skeleton-loader {
+  height: 50px;
+}

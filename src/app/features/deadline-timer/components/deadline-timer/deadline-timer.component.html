@@ -1,0 +1,11 @@
+<ng-container *ngIf="isLoading">
+  <app-skeleton-loader class="skeleton-loader"></app-skeleton-loader>
+</ng-container>
+
+<ng-container  *ngIf="hasError && !isLoading">
+  <div class="error-message">Error loading data. Please try again later.</div>
+</ng-container>
+
+<ng-container *ngIf="!hasError && !isLoading">
+  <app-deadline-display class="deadline-timer" [secondsLeft]="secondsLeft"></app-deadline-display>
+</ng-container>
