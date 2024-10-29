@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DeadlineTimerComponent } from './deadline-timer.component';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('DeadlineTimerComponent', () => {
   let component: DeadlineTimerComponent;
@@ -8,7 +9,7 @@ describe('DeadlineTimerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DeadlineTimerComponent]
+      imports: [DeadlineTimerComponent, DeadlineTimerComponent, HttpClientModule],
     })
     .compileComponents();
 
