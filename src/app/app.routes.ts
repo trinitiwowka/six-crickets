@@ -6,7 +6,11 @@ export const routes: Routes = [
     loadComponent: () => import('./features/deadline-timer/components/deadline-timer/deadline-timer.component').then(m => m.DeadlineTimerComponent)
   },
   {
-    path:'**',
-    redirectTo: 'unknown'
+    path: 'camera',
+    loadComponent: () => import('./features/camera/pages/camera-demo-page/camera-demo-page.component').then(m => m.CameraDemoPageComponent)
+  },
+  {
+    path: '**',
+    redirectTo: 'deadline'
   }
 ];

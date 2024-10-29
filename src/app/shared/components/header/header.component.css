@@ -12,6 +12,9 @@ ul {
 
 li {
   margin-right: 1rem;
+  &:first-letter {
+    text-transform: uppercase;
+  }
 }
 
 a {

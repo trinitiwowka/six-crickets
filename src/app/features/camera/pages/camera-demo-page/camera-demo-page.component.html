@@ -1,0 +1,29 @@
+<form [formGroup]="coverageForm" (ngSubmit)="checkCoverage()" class="form-container">
+  <div class="form-section">
+    <label>Required Distance Range:</label>
+    <input type="number" formControlName="requiredDistanceRangeMin" placeholder="Min Distance" class="input-field">
+    <input type="number" formControlName="requiredDistanceRangeMax" placeholder="Max Distance" class="input-field">
+  </div>
+  <div class="form-section">
+    <label>Required Light Range:</label>
+    <input type="number" formControlName="requiredLightRangeMin" placeholder="Min Light" class="input-field">
+    <input type="number" formControlName="requiredLightRangeMax" placeholder="Max Light" class="input-field">
+  </div>
+  <div formArrayName="cameras" class="form-array">
+    <div *ngFor="let camera of cameras.controls; let i = index" [formGroupName]="i" class="camera-group">
+      <h4>Camera {{ i + 1 }}</h4>
+      <div class="form-section">
+        <label>Distance Range:</label>
+        <input type="number" formControlName="distanceMin" placeholder="Min Distance" class="input-field">
+        <input type="number" formControlName="distanceMax" placeholder="Max Distance" class="input-field">
+      </div>
+      <div class="form-section">
+        <label>Light Range:</label>
+        <input type="number" formControlName="lightMin" placeholder="Min Light" class="input-field">
+        <input type="number" formControlName="lightMax" placeholder="Max Light" class="input-field">
+      </div>
+    </div>
+    <button type="button" (click)="addCamera()" class="add-button">Add Camera</button>
+  </div>
+  <button type="submit" class="submit-button">Check Coverage</button>
+</form>
