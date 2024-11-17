@@ -24,7 +24,7 @@ export class CameraDemoPageComponent {
       requiredLightRangeMax: [1000],
       cameras: this.fb.array([
         this.fb.group({ distanceMin: [0], distanceMax: [5], lightMin: [50], lightMax: [500] }),
-        this.fb.group({ distanceMin: [5], distanceMax: [15], lightMin: [500], lightMax: [1500] })
+        // this.fb.group({ distanceMin: [5], distanceMax: [15], lightMin: [500], lightMax: [1500] })
       ])
     });
   }
